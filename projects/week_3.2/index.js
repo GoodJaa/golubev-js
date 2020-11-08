@@ -74,7 +74,7 @@ const filterResult = homeworkContainer.querySelector('#filter-result');
 
 let towns = [];
 
-retryButton.addEventListener('click', () => {
+retryButton.addEventListener('click', function () {
   tryToLoad();
 });
 
