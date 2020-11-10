@@ -74,8 +74,10 @@ addButton.addEventListener('click', () => {
 
   updateTable();
 
-  addNameInput.value = '';
-  addValueInput.value = '';
+  setTimeout(() => {
+    addNameInput.value = '';
+    addValueInput.value = '';
+  }, 0);
 });
 
 listTable.addEventListener('click', (e) => {
