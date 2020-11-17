@@ -1,0 +1,18 @@
+@import "./styles/components/media.scss";
+
+$baseFontSize: 16px;
+
+//breakpoints
+
+$tablets: 768px;
+$phones: 480px;
+
+//setups
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;500&display=swap');
+@import "./styles/components/layout.scss";
+
+//components
+
+@import "./styles/components/form.scss";
+@import "./styles/components/map.scss"

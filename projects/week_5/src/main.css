@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;500&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #000;
+  font-family: "Fira Sans", Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  font-weight: 300;
+}
+
+button {
+  padding: 0;
+  border: none;
+  color: inherit;
+  background-color: transparent;
+}
+
+.wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.reviews {
+  min-height: 32.9375rem;
+  width: 23.6875rem;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  justify-content: flex-start;
+  background: white;
+  left: 50%;
+  top: 25%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.reviews.visible {
+  display: flex;
+}
+
+.reviews__header {
+  background-color: #ff8663;
+  display: flex;
+  align-items: center;
+  padding: 0 0.9375rem;
+  height: 2.8125rem;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.reviews__placemark-icon {
+  width: 0.5rem;
+  height: 0.875rem;
+}
+
+.close-btn {
+  position: relative;
+  display: block;
+  height: 0.875rem;
+  width: 0.875rem;
+}
+
+.close-btn__plank {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 4px;
+  width: 14px;
+  border-radius: 10px;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  transition: all 0.4s;
+}
+.close-btn__plank:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.reviews__content {
+  padding: 0 0.9375rem 0.9375rem;
+}
+
+.form__reviews-store {
+  min-height: 9.625rem;
+  padding: 0.9375rem 0;
+  border-bottom: solid 2px #f0f0f0;
+}
+
+.form__title {
+  color: #ff8663;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.form__input {
+  width: 100%;
+  height: 2rem;
+  border-radius: 16px;
+  border: solid 1px #c4c4c4;
+  outline: none;
+  padding: 0.625rem 0.9375rem;
+  margin-bottom: 1rem;
+}
+.form__input_textarea {
+  resize: none;
+  min-height: 8.0625rem;
+}
+
+.form__input::placeholder {
+  color: #9f9f9f;
+  font-size: 0.9375rem;
+  font-weight: 300;
+}
+
+.form__btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.form__btn {
+  background: #ff8663;
+  color: white;
+  padding: 0.625rem 1.0625rem;
+  font-size: 0.75rem;
+  font-weight: 300;
+  border-radius: 16px;
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+}

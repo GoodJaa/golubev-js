@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="66">
+    <defs>
+        <linearGradient id="gray" x1="0%" x2="0%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#6E6E6E"/>
+            <stop offset="100%" stop-color="#A2A1A0"/>
+        </linearGradient>
+    </defs>
+    <text fill="url(#orange)" font-family="FontAwesome" font-size="15" transform="matrix(5.13349 0 0 5.081 1.512 60.95)">
+        
+    </text>
+    <defs>
+        <linearGradient id="gray" x1="0%" x2="0%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#ff7249"/>
+            <stop offset="100%" stop-color="#ff9e63"/>
+        </linearGradient>
+    </defs>
+    <text fill="url(#orange)" font-family="FontAwesome" font-size="15" transform="matrix(5.13349 0 0 5.081 1.512 60.95)">
+        
+    </text>
+</svg>
