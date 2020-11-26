@@ -1,0 +1,10 @@
+.input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: 100%;
+}
+.input:placeholder {
+  color: #858e97;
+}

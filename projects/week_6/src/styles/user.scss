@@ -1,0 +1,29 @@
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.current-user {
+    display: none;
+}
+
+.user__photo-container {
+    width: rem(48px);
+    height: rem(48px);
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: rem(12px);
+
+    &--small {
+        width: rem(33px);
+        height: rem(33px);
+    }
+}
+
+.user__status {
+    color: #7f91a4;
+}

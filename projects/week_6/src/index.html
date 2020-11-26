@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
+    <title>Chat</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container main-container hidden" id="chat">
+            <aside class="left-side">
+                <div class="users__list-control">
+                    <div class="hamburger-container">
+                        <button class="users__list-btn hamburger" data-role="users-list-btn"></button>
+                    </div>
+                    <input type="text" class="users__list-input input" data-role="users-finder" placeholder="Найти...">
+                </div>
+                <div class="current-user" data-role="current-user"></div>
+                <div class="user__photo-container" data-role="user-photo" data-user="111"></div>
+                <ul class="users__list" data-role="users-list">
+                </ul>
+            </aside>
+            <div class="right-side">
+                <header class="header-section">
+                    <div class="users-numbers">
+                        <span class="header__title">Чат</span>
+                        <span class="users-numbers__current-value" data-role="users-numbers"></span>
+                    </div>
+                </header>
+                <main class="main-section">
+                    <ul class="message__list" data-role="message-list"></ul>
+                </main>
+                <footer class="footer-section">
+                    <div class="message__input-container" data-role="message-sender">
+                        <input type="text" class="message__input input" data-role="message-input"
+                            placeholder="Введите сообщение...">
+                        <button class="message__btn" data-role="message-send-btn">Отправить</button>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <div class="container login-container hidden" id="login">
+            <div class="login modal">
+                <button class="login__btn-close" data-role="login-window-close"></button>
+                <div class="login__content-container">
+                    <div class="login__icon-container">
+                        <div class="login__icon"></div>
+                    </div>
+                    <div class="login__title">Авторизация</div>
+                    <div class="login__info">Введите пожалуйста своё фио и ник для дальнейшей авторизации</div>
+                    <form class="login__form" id="validate-form" name="validateForm">
+                        <input type="text" class="login__form-input input" data-role="login-name-input"
+                            placeholder="Введите свои ФИО">
+                        <input type="text" class="login__form-input input" data-role="login-nickname-input"
+                            placeholder="Введите свой ник">
+                        <input type="submit" value="Войти" class="login__form-btn" data-role="login-submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

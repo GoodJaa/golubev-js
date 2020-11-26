@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: $baseFontSize;
+
+    @include tablets {
+        font-size: $baseFontSize - 2px;
+    }
+
+    @include phones {
+        font-size: $baseFontSize - 4px;
+    }
+
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #fff;
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    font-weight: 300;
+}
+
+button {
+    padding: 0;
+    border: none;
+    color: inherit;
+    background-color: transparent;
+    outline: none;
+    border-radius: rem(5px);
+    cursor: pointer;
+    font: inherit;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+input[type="submit"] {
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    white-space: inherit;
+    font: inherit;
+}
+
+.wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #09101a;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}

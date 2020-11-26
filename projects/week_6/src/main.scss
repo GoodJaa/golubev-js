@@ -1,0 +1,23 @@
+@import "./styles/media.scss";
+
+$baseFontSize: 14px;
+
+//breakpoints
+
+$tablets: 768px;
+$phones: 480px;
+
+//setups
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap');
+@import "./styles/layout.scss";
+
+//components
+
+@import "./styles/chat.scss";
+@import "./styles/authorization.scss";
+@import "./styles/input.scss";
+@import "./styles/message-output.scss";
+@import "./styles/hamburger.scss";
+@import "./styles/users-list.scss";
+@import "./styles/user.scss";
