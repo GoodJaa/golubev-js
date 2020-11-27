@@ -11,10 +11,11 @@ export default class MessageList {
         const item = document.createElement('li');
 
         item.classList.add('message__item-container');
-        item.dataset.user = `${from.nickname}`;
         item.innerHTML = `
         <div class="message__item">
-            <div class="message__item-left user__photo-container user__photo-container--small" data-tole='user-photo' data-user=${from.nickname}>
+            <div class="message__item-left user__photo-container user__photo-container--small" 
+            style="background-image: url(http://localhost:8282/mega-chat-3/photos/${from}.png?t=${Date.now()})"
+            data-role='user-photo' data-user=${from}>
             </div>
             <div class="message__item-right">
                 <div class="message__item-text">${text}</div>
@@ -36,24 +37,4 @@ export default class MessageList {
         this.element.append(item);
         this.element.scrollTop = this.element.scrollHeqight;
     }
-
-    // messageFilter(from) {
-        
-    //     function observeMessages(messageList) {
-    //         const observer = new MutationObserver((mutations) => {
-    //             mutations.forEach((mutation) => {
-    //                 if (mutation.type === 'childList') {
-    //                     console.log(mutation.dataset.user);
-    //                 }
-    //             });
-    //         });
-
-    //         observer.observe(messageList, {childList: true, subtree:false});
-    //     }
-
-    //     observeMessages(this.element);
-
-    //     function filter (mutation) {
-    //         if ()
-    //     }
 }

@@ -3,12 +3,14 @@ export default class UserData {
         this.element = element;
     }
 
-    set(name) {
-        this.name = name;
+    set(userLoginData) {
+        this.data = userLoginData;
+        this.element.textContent = userLoginData.name;
+        document.querySelector('[data-role=current-user]').dataset.user = userLoginData.name;
     }
 
     get() {
-        const dataUser = this.name;
-        return dataUser.nickname;
+        const dataUser = this.data;
+        return dataUser.name;
     }
 }

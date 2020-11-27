@@ -8,12 +8,12 @@ export default class UsersNumbers {
         const usersCount = users.children.length;
 
         function setUsersNumbers(num) {
-            if (num === 1) {
-                return `${num} участник`;
-            } else if (num > 1 && num < 5) {
-                return `${num} участника`;
+            if (num === 0) {
+                return `${num + 1} участник`;
+            } else if (num > 0 && num < 4) {
+                return `${num + 1} участника`;
             } else {
-                return `${num} участников`;
+                return `${num + 1} участников`;
             }
         }
 

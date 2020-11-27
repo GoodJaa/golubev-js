@@ -24,7 +24,7 @@ export default class EnterChat {
                 document.querySelector('#chat')
             ),
             userData: new Userdata(
-                document.querySelector('[data-role=current-user]')
+                document.querySelector('[data-role=current-user-name]')
             ),
             usersNumbers: new UsersNumbers(
                 document.querySelector('[data-role=users-numbers]')
@@ -68,12 +68,12 @@ export default class EnterChat {
 
     async loginSubmit(userLoginData) {
         await this.wsClient.connect();
-        this.wsClient.sendHello(userLoginData);
+        this.wsClient.sendHello(userLoginData.name);
         this.ui.userData.set(userLoginData);
         this.ui.loginWindow.hide();
         this.ui.mainWindow.show();
         this.ui.usersNumbers.set();
-        this.ui.uploadPhoto.set(`http://localhost:8282/enter-chat/photos/${name}.png?t=${Date.now()}`);
+        this.ui.uploadPhoto.set(`http://localhost:8282/enter-chat/photos/${userLoginData.name}.png?t=${Date.now()}`);
     }
 
     onMessage({ type, from, data }) {
@@ -81,14 +81,14 @@ export default class EnterChat {
 
         if (type === 'hello') {
             this.ui.userList.add(from);
-            this.ui.messageList.addSystemMessage(`${from.name} вошел в чат`);
+            this.ui.messageList.addSystemMessage(`${from} вошел в чат`);
         } else if (type === 'user-list') {
             for (const item of data) {
                 this.ui.userList.add(item);
             }
         } else if (type === 'bye-bye') {
             this.ui.userList.remove(from);
-            this.ui.messageList.addSystemMessage(`${from.name} вышел и чата`);
+            this.ui.messageList.addSystemMessage(`${from} вышел и чата`);
         } else if (type === 'text-message') {
             this.ui.messageList.add(from, data.message);
         } else if (type === 'photo-changed') {
@@ -97,8 +97,7 @@ export default class EnterChat {
             );
 
             for (const avatar of avatars) {
-                avatar.style.backgroundImage = `url(http://localhost:8282/enter-chat/photos/${data.name
-                    }.png?t=${Date.now()})`;
+                avatar.style.backgroundImage = `url(http://localhost:8282/enter-chat/photos/${data.name}.png?t=${Date.now()})`;
             }
         }
 
