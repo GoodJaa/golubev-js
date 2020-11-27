@@ -16,6 +16,8 @@ function readBody(req) {
 }
 
 const server = http.createServer(async (req, res) => {
+  res.setHeader("Acces-Control-Allow-Origin", "*");
+  
   try {
     if (/\/photos\/.+\.png/.test(req.url)) {
       const [, imageName] = req.url.match(/\/photos\/(.+\.png)/) || [];

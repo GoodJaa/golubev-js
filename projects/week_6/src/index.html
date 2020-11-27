@@ -42,11 +42,12 @@
                     <div class="message__input-container" data-role="message-sender">
                         <input type="text" class="message__input input" data-role="message-input"
                             placeholder="Введите сообщение...">
-                        <button class="message__btn" data-role="message-send-btn">Отправить</button>
+                        <button class="message__btn btn" data-role="message-send-btn">Отправить</button>
                     </div>
                 </footer>
             </div>
         </div>
+
         <div class="container login-container hidden" id="login">
             <div class="login modal">
                 <button class="login__btn-close" data-role="login-window-close"></button>
@@ -63,6 +64,21 @@
                             placeholder="Введите свой ник">
                         <input type="submit" value="Войти" class="login__form-btn" data-role="login-submit">
                     </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="load-photo-wrapper hidden" data-role="load-foto-modal">
+            <div class="load-photo">
+                <form class="load-photo__container" data-role="file-container">
+                    <label for="loadfile" class="load-photo__fileinput">Перетащите фотографию в эту область</label>
+                    <input type="file" class="load-photo__input" id="loadfile" data-role="load-photo-input">
+                    <div class="load-photo__mask"></div>
+                </form>
+                <div class="load-photo__desc">Область для профильной фотографии</div>
+                <div class="load-photo__control">
+                    <button class="load-photo__btn load-photo__btn--cancel btn" data-role="load-photo-btn-cancel">отмена</button>
+                    <button class="load-photo__btn btn" data-role="load-photo-btn-save">сохранить</button>
                 </div>
             </div>
         </div>

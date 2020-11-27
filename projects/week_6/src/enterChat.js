@@ -7,6 +7,7 @@ import WSClient from "./wsClient";
 import MessageList from "./ui/messageList";
 import MessageSender from "./ui/messageSender";
 import UploadPhoto from "./ui/uploadPhoto";
+import PhotoBox from "./ui/photoBox";
 
 export default class EnterChat {
     constructor() {
@@ -41,6 +42,7 @@ export default class EnterChat {
             ),
             uploadPhoto: new UploadPhoto(
                 document.querySelector('[data-role=user-photo]'),
+                document.querySelector('[data-role=file-container'),
                 this.onUpload.bind(this)
             )
         };
@@ -93,7 +95,7 @@ export default class EnterChat {
             this.ui.messageList.add(from, data.message);
         } else if (type === 'photo-changed') {
             const avatars = document.querySelectorAll(
-                `[data-role=user-photo][data-user=${data.name}]`
+                `[data-role=user-photo][data-user="${data.name}"]`
             );
 
             for (const avatar of avatars) {

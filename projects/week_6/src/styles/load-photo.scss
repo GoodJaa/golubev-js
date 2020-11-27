@@ -1,0 +1,84 @@
+.load-photo-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(9, 16, 26, 0.7);
+    z-index: 100000;
+
+    &.hidden {
+        display: none;
+    }
+}
+
+.load-photo {
+    background-color: #17212b;
+    height: rem(452px);
+    width: rem(364px);
+    border-radius: 5px;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+.load-photo__container {
+    height: rem(309px);
+    width: rem(282px);
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: rem(20px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    overflow: hidden;
+}
+
+.load-photo__fileinput {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: #7f91a4;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    font-size: rem(12px);
+    text-align: center;
+    padding: 50% 0;
+
+    &.hidden {
+        display: none;
+    }
+}
+
+.load-photo__input {
+    display: none;
+}
+
+.load-photo__desc {
+    color: #7f91a4;
+    margin-bottom: rem(25px);
+}
+
+.load-photo__btn {
+    text-transform: uppercase;
+    font-size: rem(15px);
+    color: #5288c1;
+    background-color: #1d2a39;
+
+    &--cancel {
+        background-color: transparent;
+        transition: background-color .3s;
+
+        &:hover {
+            background-color: #1d2a39;
+        }
+    }
+}

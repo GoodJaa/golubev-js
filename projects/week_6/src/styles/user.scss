@@ -10,20 +10,25 @@
 .user__photo-container {
     width: rem(48px);
     height: rem(48px);
-    background-position: center center;
+    background-position: center top;
     border-radius: 50%;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 0.85714rem;
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
+    cursor: pointer;
 
     &--small {
         width: rem(33px);
         height: rem(33px);
     }
+}
+
+.user__name {
+    margin-bottom: rem(11px);
 }
 
 .user__status {
